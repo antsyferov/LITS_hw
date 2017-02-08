@@ -32,3 +32,9 @@ def summ_str(a, b):
 
 print(summ_str('1', '3'))
 print(summ('1', 3))
+
+
+
+1. В Sublime нажать Ctrl + `
+2. Вставить в консоль скрипт из слака и нажать Enter
+3. В терминале sudo pip install pylint
