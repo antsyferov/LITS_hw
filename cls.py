@@ -52,7 +52,7 @@ class PeopleIterator:
             return item
         raise StopIteration()
 
-if __name__ == '__main__':
+if __name__ == '__main__': 
     lst = [Human('John', 'Doe', 'M', 25)]
     people = People(lst)
     jane = Human('Jane', 'Doe', 'F', 25)

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Users</h1>
+    <ul>
+    {% for person in people %}
+        {% if person %}
+            <li>{{ person|title }}</li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+{% endblock content %}
