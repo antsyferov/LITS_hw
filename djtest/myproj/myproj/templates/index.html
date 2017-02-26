@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Hello world </h1>
+    {% if my_var %}
+        <h2>{{ my_var|title }}</h2>
+    {% endif %}
+    <a href="{% url 'user_list' %}">Users</a>
+    <a href="{% url 'user_add' %}">User add</a>
+{% endblock content %}

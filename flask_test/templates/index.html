@@ -1,12 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Users</h1>
-    <ul>
-    {% for person in people %}
-        {% if person %}
-            <li>{{ person|title }}</li>
-        {% endif %}
-    {% endfor %}
-    </ul>
+<h1>Hello!</h1>
+<a href="{{ create_url }}">Add user</a>
+{% for user in users %}
+<p>{{ user.username }}  {{ user.email }}</p>
+{% endfor %}
 {% endblock content %}

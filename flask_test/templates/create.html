@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Create user</h1>
+  <form action="" method="post" name="create">
+      <p>
+          Please enter Name:<br>
+          {{ form.username }}<br>
+          {{ form.username.errors[0] }}<br>
+      </p>
+      <p>
+          Please enter Email:<br>
+          {{ form.email }}<br>
+          {{ form.email.errors[0] }}<br>
+      </p>
+      <p>
+          Please enter Password:<br>
+          {{ form.password }}<br>
+          {{ form.password.errors[0] }}<br>
+      </p>
+      <p><input type="submit" value="Create"></p>
+  </form>
+{% endblock content %}
