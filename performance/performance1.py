@@ -14,7 +14,7 @@ def escape_engine(s, on_whitelist, on_ascii, on_unicode):
 
 
 def parser(string):
-    s = unicode(string)
+    s = str(string)
 
     escaped = escape_engine(s,
                             on_whitelist=lambda c: c,
@@ -24,5 +24,10 @@ def parser(string):
 
     return escaped
 
-import timeit
 
+if __name__ == '__main__':
+    print('{:*^88}'.format('Start'))
+    with open('Amazon_Unlocked_Mobile.csv', 'r') as f:
+        for line in f:
+            parser(line)
+    print('{:*^88}'.format('Finish'))
