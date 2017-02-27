@@ -27,8 +27,10 @@ def mul_random(x):
 
 
 if __name__ == '__main__':
-    x = int(input('enter x: '))
-    y = int(input('enter y: '))
+    # x = int(input('enter x: '))
+    # y = int(input('enter y: '))
+    x = 10
+    y = 5
 
     res = summ(x, y)
     print(res)
