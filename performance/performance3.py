@@ -4,14 +4,12 @@ WHITELIST = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 def parser(string):
     string = str(string)
 
-    result = []
-    for char in string:
-        if char in WHITELIST:
-            result.append(char)
-        else:
-            result.append("&#%02x;" % ord(char))
+    result = "".join(
+        char if char in WHITELIST
+        else "&#%02x;" % ord(char)
+        for char in string)
 
-    return "".join(result)
+    return result
 
 
 if __name__ == '__main__':

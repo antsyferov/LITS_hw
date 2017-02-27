@@ -26,8 +26,10 @@ def parser(string):
 
 
 if __name__ == '__main__':
-    print('{:*^88}'.format('Start'))
+    import time
+    start = time.time()
     with open('Amazon_Unlocked_Mobile.csv', 'r') as f:
         for line in f:
             parser(line)
-    print('{:*^88}'.format('Finish'))
+    end = time.time()
+    print(end - start)
