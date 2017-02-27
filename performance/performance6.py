@@ -9,6 +9,7 @@ def parser(string):
     result = "".join([
         char if char in local_whitelist
         else "&#" + local_string(local_ord(char)) + ";"
+        # else '&#{};'.format(local_string(local_ord(char)))
         for char in string])
 
     return result

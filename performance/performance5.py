@@ -3,10 +3,12 @@ WHITELIST = set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 
 def parser(string):
     string = str(string)
+    local_ord = ord
+    local_whitelist = WHITELIST
 
     result = "".join([
-        char if char in WHITELIST
-        else "&#%02x;" % ord(char)
+        char if char in local_whitelist
+        else "&#%02x;" % local_ord(char)
         for char in string])
 
     return result

@@ -1,8 +1,9 @@
 WHITELIST = set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")
-CACHES = {}
+
 
 
 def parser(string):
+    CACHES = {}
     local_ord = ord
     local_whitelist = WHITELIST
     local_string = str
