@@ -7,9 +7,9 @@ def parser(string):
     local_whitelist = WHITELIST
     local_string = str
     string = local_string(string)
-    result = "".join([char if char in local_whitelist
+    result = "".join(char if char in local_whitelist
                       else CACHES.get(char) or CACHES.setdefault(char, "&#" + local_string(local_ord(char)) + ";")
-                      for char in string])
+                      for char in string)
 
     return result
 
