@@ -18,9 +18,9 @@ def parser(string):
 
     escaped = escape_engine(s,
                             on_whitelist=lambda c: c,
-                            on_ascii=lambda c: "&#%02x;" % ord(c),
+                            on_ascii=lambda c: "&.#%02x;" % ord(c),
                             on_unicode=lambda c: "&#%02x;" % ord(c)
-                            )
+                           )
 
     return escaped
 
